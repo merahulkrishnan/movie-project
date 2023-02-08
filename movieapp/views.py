@@ -29,7 +29,6 @@ def add_movie(request):
         movie.save()
     return render(request, 'add.html')
 
-
 def update(request, id):
     movie = Movie.objects.get(id=id)
     form = MovieForm(request.POST or None, request.FILES, instance=movie)
